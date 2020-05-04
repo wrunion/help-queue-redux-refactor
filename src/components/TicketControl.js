@@ -34,17 +34,25 @@ class TicketControl extends React.Component {
                   formVisibleOnPage: false });
   }
 
+  handleClick = () => {
+    this.setState({formVisibleOnPage: true});
+  }
+
   render(){
     let currentlyVisibleState = null;
+    let buttonText;
     if (this.state.formVisibleOnPage) {
       currentlyVisibleState = <NewTicketForm onNewTicketCreation={this.handleAddingNewTicketToList}  />;
+      buttonText = "Return to Ticket List";
     } else {
       currentlyVisibleState = <TicketList ticketList={this.state.masterTicketList} />;
+      buttonText = "Add Ticket"; 
     }
 
     return (
       <React.Fragment>
         {currentlyVisibleState}
+        <button onClick={this.handleClick}>{buttonText}</button>
       </React.Fragment>
     );
   }
