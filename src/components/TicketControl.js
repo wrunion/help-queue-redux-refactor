@@ -7,7 +7,7 @@ class TicketControl extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      formVisibleOnPage: false, 
+      formVisibleOnPage: true, 
       masterTicketList: [
         {
           names: 'Thato and Haley',
@@ -28,6 +28,11 @@ class TicketControl extends React.Component {
     };
   }
 
+  handleAddingNewTicketToList = (newTicket) => {
+    const newMasterTicketList = this.state.masterTicketList.concat(newTicket);
+    this.setState({masterTicketList: newMasterTicketList,
+                  formVisibleOnPage: false });
+  }
 
   render(){
     let currentlyVisibleState = null;
