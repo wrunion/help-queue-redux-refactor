@@ -24,7 +24,8 @@ class TicketControl extends React.Component {
           location: '9F',
           issue: 'Child component isn\'t rendering.'
         }
-      ]
+      ],
+      selectedTicket: null
     };
   }
 

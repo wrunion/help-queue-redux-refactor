@@ -16,20 +16,23 @@ function NewTicketForm(props){
           <input
           type='text'
           name='names'
-          placeholder='Pair Names' />
+          placeholder='Pair Names' 
+          defaultValue='Jack and Jill'/>
           </label>
         </div>
         <div><label>Location: 
         <input
           type='text'
           name='location'
-          placeholder='Location' />
+          placeholder='Location'
+          defaultValue='Up a hill' />
           </label>
         </div>
         <div><label>Issue: <br />
         <textarea
           name='issue'
-          placeholder='Describe your issue.' />
+          placeholder='Describe your issue.' 
+          defaultValue='Please help!' />
         </label>
         </div>
         <button type='submit'>Help!</button>
