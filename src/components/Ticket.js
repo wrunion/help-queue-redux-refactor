@@ -16,10 +16,10 @@ function Ticket(props) {
           {issue}
         </div>
         {/* Buttons */}
-        <div class="extra content margin-1">
-          <div class="ui two buttons">
-            <div class="ui basic green button">Edit</div>
-            <div class="ui basic red button">Close Ticket</div>
+        <div className="extra content margin-1">
+          <div className="ui two buttons">
+            <div className="ui basic green button">Edit</div>
+            <div className="ui basic red button">Close Ticket</div>
           </div>
         </div>
       </div>
