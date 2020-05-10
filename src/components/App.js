@@ -4,7 +4,7 @@ import TicketControl from "./TicketControl";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App ui container">
       <Header />
       <TicketControl />
     </div>

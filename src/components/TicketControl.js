@@ -9,12 +9,6 @@ class TicketControl extends React.Component {
     this.state = {
       formVisible: false, 
       masterTicketList: [
-        {
-          names: 'Imani & Jacob',
-          location: '9F',
-          issue: 'Child component isn\'t rendering.',
-          id: 3
-        }
       ],
       selectedTicket: null
     };
@@ -50,7 +44,7 @@ class TicketControl extends React.Component {
     return (
       <React.Fragment>
         {userView}
-        <button onClick={this.handleClick}>{buttonText}</button>
+        <button className="ui button basic blue small" onClick={this.handleClick}>{buttonText}</button>
       </React.Fragment>
     );
   }

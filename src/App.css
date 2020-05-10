@@ -1,3 +1,10 @@
+.TicketList {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+
 .App {
   text-align: center;
 }

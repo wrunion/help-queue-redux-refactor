@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 function TicketList(props){
   return (
-    <React.Fragment>
+    <div className="ui cards TicketList">
       <hr/>
       {props.ticketList.map((ticket) =>
         <Ticket names={ticket.names}
@@ -12,7 +12,7 @@ function TicketList(props){
           issue={ticket.issue}
           key ={ticket.id} />
       )}
-    </React.Fragment>
+    </div>
   );
 }
 
