@@ -5,6 +5,7 @@ function Ticket(props) {
   return (
     <div className="ui card">
       <div className="content">
+        {/* Text */}
         <div className="header">
           {names}
         </div>
@@ -14,6 +15,7 @@ function Ticket(props) {
         <div className="description">
           {issue}
         </div>
+        {/* Buttons */}
         <div class="extra content">
           <div class="ui two buttons">
           <div class="ui basic green button">Edit</div>
