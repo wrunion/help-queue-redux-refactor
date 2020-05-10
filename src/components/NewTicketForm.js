@@ -4,14 +4,14 @@ import PropTypes from "prop-types";
 
 function NewTicketForm(props){
 
-  function handleNewTicketFormSubmission(event) {
-    event.preventDefault();
-    props.onNewTicketCreation({names: event.target.names.value, location: event.target.location.value, issue: event.target.issue.value, id: v4()});
+  function handleSubmit(e) {
+    e.preventDefault();
+    props.createTicket({names: e.target.names.value, location: e.target.location.value, issue: e.target.issue.value, id: v4()});
   }
 
   return (
     <React.Fragment>
-      <form onSubmit={handleNewTicketFormSubmission}>
+      <form onSubmit={handleSubmit}>
         <div><label>Names:         
           <input
           type='text'
@@ -42,7 +42,7 @@ function NewTicketForm(props){
 }
 
 NewTicketForm.propTypes = {
-  onNewTicketCreation: PropTypes.func
+  createTicket: PropTypes.func
 };
 
 export default NewTicketForm;

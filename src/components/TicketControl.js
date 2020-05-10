@@ -12,24 +12,27 @@ class TicketControl extends React.Component {
         {
           names: 'Thato and Haley',
           location: '3A',
-          issue: 'Firebase won\'t save record. Halp.'
+          issue: 'Firebase won\'t save record. Halp.',
+          id: 1
         },
         {
           names: 'Sleater and Kinney',
           location: '4B',
-          issue: 'Prop types are throwing an error.'
+          issue: 'Prop types are throwing an error.', 
+          id: 2
         },
         {
           names: 'Imani & Jacob',
           location: '9F',
-          issue: 'Child component isn\'t rendering.'
+          issue: 'Child component isn\'t rendering.',
+          id: 3
         }
       ],
       selectedTicket: null
     };
   }
 
-  handleAddingNewTicketToList = (newTicket) => {
+  addTicketToList = (newTicket) => {
     const newMasterTicketList = this.state.masterTicketList.concat(newTicket);
     this.setState({masterTicketList: newMasterTicketList,
     formVisibleOnPage: false });
@@ -45,7 +48,7 @@ class TicketControl extends React.Component {
     let currentlyVisibleState = null;
     let buttonText;
     if (this.state.formVisibleOnPage) {
-      currentlyVisibleState = <NewTicketForm onNewTicketCreation={this.handleAddingNewTicketToList}  />;
+      currentlyVisibleState = <NewTicketForm createTicket={this.addTicketToList}  />;
       buttonText = "Return to Ticket List";
     } else {
       currentlyVisibleState = <TicketList ticketList={this.state.masterTicketList} />;
