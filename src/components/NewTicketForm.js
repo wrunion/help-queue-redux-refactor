@@ -35,7 +35,7 @@ function NewTicketForm(props){
           defaultValue='Please help!' />
         </label>
         </div>
-        <button type='submit'>Help!</button>
+        <button type='submit' className="ui button blue tiny">Help!</button>
       </form>
     </React.Fragment>
   );

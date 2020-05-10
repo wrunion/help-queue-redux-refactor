@@ -7,7 +7,7 @@ class TicketControl extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      formVisible: false, 
+      formVisible: true, 
       masterTicketList: [
       ],
       selectedTicket: null
